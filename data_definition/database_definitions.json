@@ -1,0 +1,216 @@
+{
+    "tables": [
+        {
+            "name": "vw_QuestionData",
+            "description": "Description of the table",
+            "columns": [
+                {
+                    "name": "Answer",
+                    "type": "text",
+                    "description": "Column Name: Answer\nData Type: Text\n\nDescription:\nThe 'Answer' column in the database is designed to store textual data, specifically detailed responses or solutions related to queries or problems posed within the application or system. This column is crucial for applications that involve data retrieval, question answering, customer support, educational tools, or any system that requires a repository of extensive textual answers.\n\nCharacteristics:\n1. **Data Type - Text**: This column uses the 'text' data type, which is suitable for storing long strings of characters. The 'text' data type is ideal for entries that can exceed typical length limits, as it can handle large amounts of text, potentially including thousands of characters without specific length constraints.\n\n2. **Content**: The content of the 'Answer' column typically includes full sentences, paragraphs, or even larger structures of text that provide explanations, descriptions, instructions, or solutions. The text may contain technical terminology, detailed narratives, step-by-step guides, or comprehensive explanations depending on the context of the query or problem.\n\n3. **Usage**: This column is frequently accessed for read operations, especially in scenarios where users query the database to find specific answers. It may also be involved in write operations when new answers are added or existing answers are updated to maintain the accuracy and relevance of the information provided.\n\n4. **Searchability**: Given its textual nature, the 'Answer' column is often indexed or involved in full-text search operations to facilitate efficient searching and retrieval of relevant answers based"
+                },
+                {
+                    "name": "AnswerId",
+                    "type": "bigint",
+                    "description": "Column Name: AnswerId\nData Type: bigint\n\nDescription:\nThe 'AnswerId' column is designed to uniquely identify each record in a database table that stores answers, typically in contexts such as quizzes, surveys, exams, or any other scenario where responses are recorded. The data type 'bigint' indicates that this column can store very large integers, making it suitable for databases expected to handle a vast number of entries.\n\nCharacteristics:\n1. **Data Type**: bigint - This data type is used to store large integer values. It is capable of holding values from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. This extensive range ensures that the column can handle databases with a very high number of records without the risk of running out of unique identifiers.\n\n2. **Uniqueness**: Each value in the 'AnswerId' column must be unique. This uniqueness is crucial as it ensures that each answer can be distinctly identified and referenced. The uniqueness is typically enforced through a primary key or a unique index.\n\n3. **Primary Key**: Often, 'AnswerId' is used as a primary key. As a primary key, it not only ensures uniqueness but also enhances the performance of the database when performing searches, joins, and other queries that involve this column.\n\n4. **Not Nullable**: The 'AnswerId' column is generally set to be NOT NULL, implying that every record in the table must"
+                },
+                {
+                    "name": "CategoryId",
+                    "type": "bigint",
+                    "description": "Column Name: CategoryId\nData Type: bigint\n\nDescription:\nThe 'CategoryId' column is a critical component of the database, serving as a unique identifier for various categories within the system. This column is of the data type 'bigint', which is a large-range integer data type capable of storing very large values. The 'bigint' data type is particularly useful when the number of entries is expected to exceed the limits of smaller integer types, such as 'int'.\n\nKey Characteristics:\n1. **Data Type**: bigint - This allows for a larger range of values compared to standard int, accommodating scenarios where the number of categories can be extremely large. The bigint type typically supports values from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.\n\n2. **Uniqueness**: Each value in the 'CategoryId' column must be unique. This uniqueness is crucial as it ensures that each category can be distinctly identified without ambiguity. This property is often enforced through a primary key or a unique index in the database schema.\n\n3. **Non-Nullable**: The 'CategoryId' column is generally set as non-nullable, meaning that every record must have a valid category identifier. This requirement ensures data integrity and consistency, preventing records from existing without a corresponding category.\n\n4. **Primary Key**: Often, 'CategoryId' is used as a primary key in the category table. As a primary key, it not only enforces"
+                },
+                {
+                    "name": "CategoryName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "CategoryObtainedPoint",
+                    "type": "float",
+                    "description": "Column Name: CategoryObtainedPoint\nData Type: float\n\nDescription:\nThe 'CategoryObtainedPoint' column in the database is designed to store numerical values that represent the points or scores obtained in a specific category by an entity, such as a student, participant, or any evaluative subject. The data type of this column is 'float', which means it can hold real numbers that include decimal points, allowing for precise and fractional scoring.\n\nPurpose:\nThe primary purpose of the 'CategoryObtainedPoint' column is to record the points scored in a particular category or section of an assessment, competition, or any performance-based activity. This could be used in various contexts, such as academic exams where different subjects or sections might have separate scoring, or in competitions where different skills or tasks are scored individually.\n\nUsage:\n- In an educational setting, this column could store scores for categories like Mathematics, Science, or Literature in a test or examination.\n- In a corporate or training environment, it could represent scores in areas such as leadership, technical skills, or communication in an employee evaluation.\n- In sports or other competitive events, it might reflect performance in specific aspects like accuracy, speed, or creativity.\n\nCharacteristics:\n- **Precision**: As a float, this column can accommodate scores that require precision beyond whole numbers, such as 95.75 or 88.25, which is particularly useful for fine-grained scoring systems.\n- **Flexibility**: It can handle a wide range"
+                },
+                {
+                    "name": "CategoryPossiblePoint",
+                    "type": "float",
+                    "description": "Column Name: CategoryPossiblePoint\nData Type: float\n\nDescription:\nThe 'CategoryPossiblePoint' column in the database is designed to store numerical values that represent the maximum possible points or scores that can be achieved within a specific category. This column is crucial for applications where scoring or point allocation is involved, such as educational systems, gaming platforms, performance tracking applications, or any system that involves a scoring mechanism.\n\nDetailed Attributes:\n1. **Data Type - Float**: This column uses the float data type to accommodate decimal values, allowing for precise representation of possible points which might not always be whole numbers. This flexibility is essential for systems where scoring can include fractions or decimals, ensuring accuracy in calculations and evaluations.\n\n2. **Purpose**: The primary purpose of the 'CategoryPossiblePoint' column is to define the upper limit of points that can be awarded in a particular category. This could be used in contexts like exams, where different sections have a maximum score, or in games, where different levels or challenges have specific point limits.\n\n3. **Usage in Calculations**: This column is often used in calculations to determine percentages or to normalize scores across different categories. For instance, a student\u2019s score in a category can be divided by the 'CategoryPossiblePoint' to calculate the percentage score for that category.\n\n4. **Reference for Validation**: The 'CategoryPossiblePoint' serves as a reference point for validating the scores entered in related columns. Any score reported in a specific category should not exceed the value specified"
+                },
+                {
+                    "name": "CatSequenceNo",
+                    "type": "int",
+                    "description": "Integer numerical data."
+                },
+                {
+                    "name": "CatWeight",
+                    "type": "int",
+                    "description": "Integer numerical data."
+                },
+                {
+                    "name": "MaxRating",
+                    "type": "decimal",
+                    "description": "Column Name: MaxRating\nData Type: Decimal\n\nDescription:\nThe 'MaxRating' column is designed to store numerical values that represent the highest rating achieved by an entity, such as a product, service, or performance. The data type for this column is 'decimal', which is ideal for storing numbers that require precision, including fractional values.\n\nKey Attributes:\n1. **Precision and Scale**: The 'decimal' data type allows for the specification of precision (the total number of digits allowed) and scale (the number of digits to the right of the decimal point). For instance, if 'MaxRating' is defined as decimal(5,2), it can store values up to 999.99. The exact precision and scale should be chosen based on the maximum expected rating value and the required granularity.\n\n2. **Range**: The range of values depends on the specified precision and scale. It is crucial to ensure that the range is adequate to cover all possible rating values without truncation or rounding errors.\n\n3. **Default Value**: If applicable, a default value can be set based on typical use cases or business rules. For example, a default value of 0.00 might be used to indicate that no ratings have been recorded yet.\n\n4. **Constraints**: \n   - **Not Null**: This constraint might be applied if a rating is required for every record, ensuring data completeness.\n   - **Check**: A check constraint might be used to ensure that ratings fall within a specific range"
+                },
+                {
+                    "name": "QueSequenceNo",
+                    "type": "int",
+                    "description": "Integer numerical data."
+                },
+                {
+                    "name": "QuestionID",
+                    "type": "bigint",
+                    "description": "Unique identifier for the record."
+                },
+                {
+                    "name": "QuestionObtainPoint",
+                    "type": "float",
+                    "description": "Column Name: QuestionObtainPoint\nData Type: float\n\nDescription:\nThe 'QuestionObtainPoint' column in the database is designed to store numerical values that represent the points or scores obtained by a participant or user for answering a specific question in a quiz, survey, or any form of assessment. The data type of this column is 'float', which allows it to hold both integer and decimal values, providing the flexibility to accommodate fractional points and more precise scoring systems.\n\nKey Characteristics:\n1. **Data Type**: The column uses the 'float' data type, which is suitable for storing floating-point numbers. This means it can handle values that include decimals, such as 2.5, 3.75, etc., which are common in scoring systems where partial points can be awarded.\n\n2. **Precision and Scale**: The precision of the 'float' data type can vary depending on the database system used (e.g., SQL Server, MySQL, PostgreSQL). It is capable of storing a wide range of values, from very small to very large numbers, making it ideal for diverse scoring scenarios.\n\n3. **Usage**: This column is primarily used to record the points earned by an individual for correctly answering or fulfilling the requirements of a particular question. It can be used in the calculation of total scores, averages, or statistical analysis related to performance assessments.\n\n4. **Importance in Analysis**: 'QuestionObtainPoint' is crucial for performance tracking and analysis. It helps in understanding the"
+                },
+                {
+                    "name": "QuestionPossiblePoint",
+                    "type": "float",
+                    "description": "Column Name: QuestionPossiblePoint\nData Type: float\n\nDescription:\nThe 'QuestionPossiblePoint' column in a database table is designed to store the maximum number of points that can be awarded for a specific question in an assessment, test, or quiz. This column is crucial for calculating scores, setting grading scales, and analyzing the weighting of different questions within an assessment.\n\nAttributes:\n- **Data Type**: float. This data type is chosen because the possible points for a question might not always be a whole number; there could be fractional values (e.g., 1.5, 2.75 points), especially in cases where partial credits are allowed or when questions are weighted differently.\n- **Precision and Scale**: The precision and scale of the float data type should be sufficient to accommodate the required level of accuracy for scoring. Typically, a precision of up to 4 digits with a scale of 2 (allowing for values like 10.25) is adequate for most educational or assessment contexts.\n- **Nullable**: This column should not be nullable, as every question must have a defined point value to ensure accurate score calculations. A default value (commonly 0) can be set, but it is recommended that each question's point value is explicitly defined when the question is created.\n- **Default Value**: Depending on the system's requirements, a default value might be set if the point value is not specified. However, it is generally recommended to require this field during question setup to"
+                },
+                {
+                    "name": "QuestionText",
+                    "type": "text",
+                    "description": "Column Name: QuestionText\nData Type: text\n\nDescription:\nThe 'QuestionText' column is designed to store the textual content of questions in a database. This column is of the data type 'text', which allows it to hold a string of text of variable length, potentially including very long passages. The 'text' data type is particularly suitable for this column as questions can vary significantly in length and complexity, ranging from short queries to detailed and multi-part questions.\n\nPurpose:\nThe primary purpose of the 'QuestionText' column is to store the full and exact wording of questions that are posed within the context of the application or system utilizing this database. This could be used in various scenarios such as surveys, quizzes, educational platforms, customer service databases, and more.\n\nCharacteristics:\n1. **Unlimited Length**: The 'text' data type typically does not impose a strict limit on the number of characters, allowing for extensive text entries that can accommodate even the most detailed questions.\n2. **Flexibility**: This column can handle any form of textual data including plain text, formatted text (if the system supports it), and potentially even embedded symbols or special characters that might be part of the question.\n3. **Searchability**: While the 'text' data type is searchable, queries on longer text fields might be less efficient than on shorter text or fixed-length fields. Proper indexing strategies and full-text search capabilities might be required for optimizing search performance.\n4. **Encoding**: The text stored in"
+                },
+                {
+                    "name": "QueWeight",
+                    "type": "int",
+                    "description": "Integer numerical data."
+                }
+            ]
+        },
+        {
+            "name": "vw_MetaData_Numm",
+            "description": "Description of the table",
+            "columns": [
+                {
+                    "name": "AgentID",
+                    "type": "varchar",
+                    "description": "Unique identifier for the record."
+                },
+                {
+                    "name": "AgentName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "AnswerID",
+                    "type": "bigint",
+                    "description": "Unique identifier for the record."
+                },
+                {
+                    "name": "CallDate",
+                    "type": "date",
+                    "description": "Column Name: CallDate\nData Type: date\n\nDescription:\nThe 'CallDate' column in the database stores the specific date on which a call was made or received. The data type for this column is 'date', which ensures that the information is stored in a standard date format, typically YYYY-MM-DD, although the format can vary depending on the database system (e.g., SQL Server, MySQL, Oracle).\n\nPurpose:\nThe primary purpose of the 'CallDate' column is to record the exact date of a telephone interaction, which is crucial for various business operations such as customer service tracking, sales call monitoring, and historical data analysis. This column helps in organizing and sorting calls by date, enabling efficient retrieval of call records for any given day.\n\nUsage:\n- **Historical Analysis**: Analysts use this column to identify trends over time, such as increases or decreases in call volume on specific dates or during certain periods.\n- **Customer Service**: Customer service teams use the 'CallDate' to quickly find when a customer was last contacted, which aids in managing follow-ups and service quality.\n- **Compliance and Reporting**: For businesses in regulated industries, recording the call date is essential for compliance with legal and operational reporting requirements.\n- **Billing and Invoicing**: In scenarios where calls are billed (e.g., consultancy services), the 'CallDate' is used to calculate billing periods and issue accurate invoices.\n\nConstraints:\n- **Non-Nullable**: This column should not allow NULL values"
+                },
+                {
+                    "name": "CampaignId",
+                    "type": "bigint",
+                    "description": "Column Name: CampaignId\nData Type: bigint\n\nDescription:\nThe 'CampaignId' column is a critical identifier used in the database to uniquely identify each marketing or advertising campaign within the system. This column is of the data type 'bigint', which stands for \"big integer.\" The bigint data type is used to store very large integer values that exceed the range supported by standard integer types. Specifically, bigint can store any whole number between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807.\n\nPurpose:\nThe primary purpose of the 'CampaignId' column is to serve as a unique key for each campaign record stored in the database. This unique identifier ensures that each campaign can be distinctly referenced, managed, and analyzed without ambiguity. It is crucial for linking related data across multiple tables or datasets, such as campaign budgets, schedules, outcomes, and other associated metrics.\n\nUsage:\n1. **Referential Integrity**: The 'CampaignId' is often used as a foreign key in other related tables, establishing a relational link to the campaigns table. This allows for the maintenance of data integrity across the database by ensuring that all records referencing a campaign are consistently and accurately associated with the correct campaign.\n\n2. **Data Retrieval**: It facilitates quick and efficient retrieval of campaign-specific data by querying this unique identifier. Analysts and marketers can easily access all data related to a particular campaign by using the 'CampaignId'.\n\n3"
+                },
+                {
+                    "name": "CampaignName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "ClientID",
+                    "type": "int",
+                    "description": "Unique identifier for the record."
+                },
+                {
+                    "name": "ClientName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "CreatedDate",
+                    "type": "date",
+                    "description": "Column Name: CreatedDate\nData Type: date\n\nDescription:\nThe 'CreatedDate' column in a database table is used to store the date on which a particular record was created. This column is crucial for tracking the history of records and is often used in auditing, reporting, and data analysis to understand the timeline of data entry or record creation.\n\nDetails:\n1. **Data Type**: The data type of the 'CreatedDate' column is 'date'. This means it will store the date in a standard date format, typically YYYY-MM-DD, without time information. The specific format can vary depending on the database system (e.g., SQL Server, MySQL, PostgreSQL).\n\n2. **Usage**: \n   - **Auditing**: Helps in tracking when a record was added to the database, which is essential for compliance and monitoring changes over time.\n   - **Reporting**: Useful in generating reports where the creation date of records is a significant factor, such as calculating the number of entries made on a particular date or within a specific period.\n   - **Data Analysis**: Analysts use this column to filter, sort, and perform time-series analysis to understand trends and patterns in data creation.\n\n3. **Default Value**: Often, the 'CreatedDate' column is set to automatically capture the current date at the time of record insertion. This is typically achieved using default constraints in the database or through application logic, such as setting the default value to CURRENT_DATE or a similar system function.\n\n4. **"
+                },
+                {
+                    "name": "Disposition",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "Duration",
+                    "type": "int",
+                    "description": "Integer numerical data."
+                },
+                {
+                    "name": "EvalFormId",
+                    "type": "bigint",
+                    "description": "Column Name: EvalFormId\nData Type: bigint\n\nDescription:\nThe 'EvalFormId' column serves as a unique identifier for evaluation forms within a database. This column is critical for distinguishing each form and linking it to specific data entries or records related to evaluations.\n\n1. **Purpose**: The primary purpose of the 'EvalFormId' column is to uniquely identify each evaluation form stored in the database. This identifier allows for efficient retrieval, updating, and management of form data.\n\n2. **Data Type Explanation**:\n   - **bigint**: The data type chosen for 'EvalFormId' is 'bigint', which stands for \"big integer\". This data type is used to store very large integer values. It is particularly useful in databases that anticipate a significant number of entries, as it can hold values from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. Using 'bigint' ensures that the database can handle a vast number of unique identifiers without the risk of running out of possible values.\n\n3. **Usage**:\n   - **Primary Key**: Typically, 'EvalFormId' would be set as the primary key of the table in which it resides. This setting ensures that each value in this column is unique and not null, thereby maintaining data integrity and enabling fast data retrieval.\n   - **Foreign Key Relationships**: In relational database designs, 'EvalFormId' might also be used as"
+                },
+                {
+                    "name": "EvalFormName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "IsAutoFailure",
+                    "type": "int",
+                    "description": "Integer numerical data."
+                },
+                {
+                    "name": "IsReviewed",
+                    "type": "int",
+                    "description": "Integer numerical data."
+                },
+                {
+                    "name": "LocationName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "Number",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "ObserverID",
+                    "type": "varchar",
+                    "description": "Unique identifier for the record."
+                },
+                {
+                    "name": "ObserverName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "Programid",
+                    "type": "int",
+                    "description": "Integer numerical data."
+                },
+                {
+                    "name": "ProgramName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "SupervisorId",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "SupervisorName",
+                    "type": "varchar",
+                    "description": "Textual data, varying length."
+                },
+                {
+                    "name": "TotalObtainedPoint",
+                    "type": "float",
+                    "description": "Column Name: TotalObtainedPoint\nData Type: float\n\nDescription:\nThe 'TotalObtainedPoint' column is designed to store numerical values that represent the total points obtained by an entity, which could be a student, participant, or any entity involved in activities where points are awarded. The data type of this column is 'float', which allows it to hold both integer and decimal values, providing the flexibility to accommodate fractional points which can be crucial for precise scoring systems.\n\nPurpose:\nThe primary purpose of this column is to record the cumulative total of points that an entity has earned over a specified period or across various events or assessments. This could be used in educational settings to track student performance, in gaming environments to record scores, or in any competitive scenario where points are used as a measure of achievement or success.\n\nUsage:\n- In educational systems, 'TotalObtainedPoint' could reflect the total points a student has earned across different subjects or assessments, contributing to their overall grade or performance evaluation.\n- In competitions or tournaments, it could aggregate the points earned in various stages or rounds.\n- In customer loyalty programs, it might represent the total points a customer has accumulated through purchases or activities, which could be redeemable for rewards.\n\nCharacteristics:\n- **Precision**: As a float, this column can store values with decimal precision, which is essential for ensuring accuracy in point calculations, especially when partial points are awarded.\n- **Range**: The float data type typically supports a very wide"
+                },
+                {
+                    "name": "TotalPossiblePoint",
+                    "type": "float",
+                    "description": "Column Name: TotalPossiblePoint\nData Type: float\n\nDescription:\nThe 'TotalPossiblePoint' column in the database is designed to store numerical values that represent the total possible points that can be achieved in a specific context, such as a test, assignment, or competition. The data type of this column is 'float', which allows it to hold both integer and decimal values, providing the flexibility to accommodate fractional points which are common in scoring systems.\n\nPurpose:\nThe primary purpose of the 'TotalPossiblePoint' column is to define the maximum score that can be obtained in various evaluative scenarios. This is crucial for calculating percentages, determining pass/fail status, or adjusting scores based on different weighting systems. It serves as a reference point against which individual or group performances are measured.\n\nUsage:\n- In educational settings, this column could represent the total points possible on exams, quizzes, or projects, helping educators to grade students accurately.\n- In competitions or events, it might denote the highest score achievable, which is essential for ranking participants and determining winners.\n\nCharacteristics:\n- **Precision**: As a float, this column can handle precise values, which is particularly useful when the scoring involves half-points or other fractional values.\n- **Range**: The float data type typically supports a very wide range of values, making it suitable for scenarios where the total possible points could be very high or involve complex calculations.\n- **Non-negative values**: Typically, the values in this column should be non-negative, as negative scores"
+                }
+            ]
+        }
+    ]
+}
