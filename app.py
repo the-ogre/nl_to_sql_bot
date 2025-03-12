@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="ETech AI Assistant",        
+    page_title="SQL AI Assistant",        
     layout="wide",                        
     initial_sidebar_state="expanded",    
     page_icon=":books:",               
@@ -14,12 +14,12 @@ import time
 def clear_chat():
     st.session_state.messages = [{"role": "assistant", "content": "Put your question"}]
 
-st.subheader("""Welcome to ETech AI Assistant. Whether you are an Agent or a Supervisor, I am here to help you with your questions""")
+st.subheader("""Welcome to SQL AI Assistant. Whether you are an Agent or a Supervisor, I am here to help you with your questions""")
 st.write("For example, you can questions like 'Check my total evaluations for today', 'Are there any areas where I could have performed better?' etc.")
 st.markdown("<hr>", unsafe_allow_html=True)
 
 with st.sidebar:
-    st.title("ETech AI Assistant v1")
+    st.title("ETech AI Assistant")
     st.button('Clear Chat', on_click=clear_chat())
 
 global sql_tool

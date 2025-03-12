@@ -1,5 +1,0 @@
-1. Add programmatic guardrails instead of depending on prompts. It is hallucinating when asked general questions about life. 
-2. Create a cache mechanism in which we store the question answer pairs into a table in the database, and use it.
-3. Insert feedback button from the user in the UI and use it further make the Gen AI solution more trustworthy.
-4. Include evaluation metrics for Observability.
-5. 
